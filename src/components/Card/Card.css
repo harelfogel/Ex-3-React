@@ -1,0 +1,91 @@
+
+
+span, .price {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 127.7%; 
+}
+
+
+.card{
+    width: 291px;
+    height: 252px;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 20px;
+    background: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 100px 80px rgba(153, 165, 236, 0.05), 0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963), 0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704), 0px 20px 13px rgba(153, 165, 236, 0.025), 0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296), 0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
+}
+
+.card>img { 
+    width:263.19px;
+    height:162.38px;
+    margin-left: 13.8px;
+    align-items: center;
+    align-content:center;
+    justify-content: center;
+    margin-top: 23.62px;
+    border-radius:20px;
+}
+.button{
+    margin-top:-25px;
+    margin-left:200px;
+}
+
+  .button-edit{
+    background-color: #04AA6D;
+    border-radius: 50%;
+    width: 32.76px;
+    height: 32.76px;    
+    background: #FF6647;
+    border: 2.10345px solid #FFFFFF;
+    box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
+  }
+
+  .button-delete{
+    background-color: #04AA6D;
+    width: 32.76px;
+    height: 32.76px;
+    border-radius: 50%;
+    background: #FF6647;
+    border: 2.10345px solid #FFFFFF;
+    box-shadow: 0px 4.2069px 4.2069px rgba(255, 102, 71, 0.25);
+  }
+
+.bottom-card{
+    margin-top: -12px;
+}
+
+h5{
+    display:flex;
+    justify-content:space-between;
+    margin:10px;
+    padding-left:9px;
+}
+
+.row{
+    display:flex;
+    justify-content: space-evenly;
+    margin-left: -3px;
+    margin-top: 5px;
+}
+
+span{
+    
+    margin-left:-7px;
+    color: #353646;
+    opacity: 0.4;
+    align-content: center;
+}
+
+.price{
+  margin-left: 130px; 
+  color:#34A59F;
+}
+
+
+
+
+
