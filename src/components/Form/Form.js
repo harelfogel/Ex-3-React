@@ -1,7 +1,7 @@
 import React from 'react';
 import './Form.css';
 import { RiAddFill } from 'react-icons/ri';
-import traveImage from '../images/travel.png'
+
 
 const AddVacationForm = () => {
     return <div className="form-container">
@@ -30,11 +30,10 @@ const AddVacationForm = () => {
                     <p>Image url</p>
                     <input type="text" name="image-url" placeholder="Image url" />
                 </label>
+            <div className="travel-image">
+            </div>
             </fieldset>
             <div className="bottom-form">
-                <div className="travel-image">
-                    <img  src={traveImage} />
-                </div>
                 <button className="add-button" type="submit">
                     <RiAddFill style={{ color: "white", width: "28px", height: "28px" }} />
                 </button>

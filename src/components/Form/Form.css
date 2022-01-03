@@ -7,12 +7,13 @@
 .form-container{
     display: flex;
     width: 618px;
-    height:649px;
-    border:solid;
+    height:614px;
     background: #FFFFFF;
     border-radius: 25px;
-    margin-top:255px;
+    margin-top:225px;
     flex-direction: column;
+     transform: matrix(1, 0, 0, 1, 0, 0); 
+    box-shadow: 0px 0px 17.8793px rgba(0, 0, 0, 0.05);
 }
 
 h2{
@@ -22,12 +23,8 @@ h2{
     line-height: 34px;
     color: #000001;
     text-shadow: 0px 2px 80px #FFFFFF;
-    margin-top: 3px;
-    font-family: Alef;
-    font-style: normal;
-    font-weight: normal;
+    margin-top: 10px;
     font-size: 25px;
-    line-height: 34px;
     color: #000001;
 }
 
@@ -56,6 +53,8 @@ input{
     font-size: 16px;
     line-height: 22px;
     color: #AFAFAF;
+    border: #FFFFFF;
+
 }
 
 .bottom-form{
@@ -72,14 +71,15 @@ input{
 }
 
 .travel-image{
+    background-image: url('../images/travel.png');
     width: 294px;
     height: 279px;
     display:flex;
     flex-wrap: wrap;
-    color: transparent;
     justify-content: center;
-    margin-top: -269px;
-    margin-left: -70px;
+    align-content: center;
+    margin-top: -84px;
+    margin-left: 150px;
 }
 
 .add-button{
@@ -92,7 +92,8 @@ input{
     height: 48px;
     justify-content: center;
     align-content: center;
-    margin-left: -167px;
+    margin-left: 40px;
+    margin-top: -430px;
 }
 
 

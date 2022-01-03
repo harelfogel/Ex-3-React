@@ -13,7 +13,7 @@ const Card = (props) => {
             <MdModeEdit style={{color:"white",width:"18px",height:"20px","justifyContent":"center"}}/> 
            </button>
            <button className="button-delete">
-            <MdDelete style={{color:"white",width:"18px",height:"20px",justifyContent:"center",marginLeft:"0.01%"}}/>
+            <MdDelete style={{color:"white",width:"18px",height:"20px",justifyContent:"center",marginLeft:"-1px"}}/>
            </button>
         </div>
         <div className="bottom-card" >
