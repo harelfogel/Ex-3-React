@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import './SearchBar.css';
 import { FiSearch } from 'react-icons/fi';
-import vacationsData from './../Data/vacations';
 
 
-const SearchBar = (props) => {
+
+const SearchBar = ({vacations,setFilteredData}) => {
     const [searchTerm, setSearchTerm] = useState("");
 
     const handleFilter = () => {
 
-        const newFilter = vacationsData.filter((value) => {
+        const newFilter = vacations.filter((value) => {
             return value.name.toLowerCase().includes(searchTerm.toLowerCase());
         });
-        props.setFilteredData(newFilter);
+        setFilteredData(newFilter);
     };
 
     useEffect (() =>{
-        console.log(searchTerm);
         if(searchTerm===""){
-            props.setFilteredData([]);
+            setFilteredData([]);
         }
     }, [searchTerm])
 
@@ -26,10 +25,10 @@ const SearchBar = (props) => {
         <div className="search-bar">
             <div className="search-container">
                 <i className="search-icon"> <FiSearch style={{ color: '#AFAFAF' }} /></i>
-                <input type="text" className="search-term" placeholder="Search name or location" onChange={(e) => setSearchTerm(e.target.value)} />
+                <input type="text" className="search-term" placeholder="Search by name or location" onChange={(e) => setSearchTerm(e.target.value)} />
             </div>
             <button type="submit" className="search-button" onClick={handleFilter}>
-                <FiSearch style={{ color: "#FFFFFF", width: "18px", height: "18px" }} />
+                <FiSearch style={{ color: "#FFFFFF", width: "20px", height: "20px",cursor:"pointer" }} />
             </button>
         </div>);
 
