@@ -23,7 +23,7 @@ const AddVacationForm = (props) => {
         e.preventDefault();
         if(checkProperties(addVacation)){
            props.setVacations(prevState =>([...prevState,addVacation]));
-           alert('New vacation hass been added!');
+           alert('New vacation has been added!');
         } 
     };
     return <div className="form-container">

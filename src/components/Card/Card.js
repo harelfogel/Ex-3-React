@@ -4,8 +4,6 @@ import { BsGeoAltFill } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
 import { MdModeEdit } from "react-icons/md";
 
-
-
 const Card = (props) => {
     const [selected, setSelected] = useState(false);
     const handleClick = () => {
