@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './SearchBar.css';
 import { FiSearch } from 'react-icons/fi';
-import { CgOpenCollective } from 'react-icons/cg';
 
-const SearchBar = ({vacations,setFilteredData,setFilteredError}) => {
+
+const SearchBar = (props) => {
     const [searchTerm, setSearchTerm] = useState("");
 
     const handleFilter = () => {
-        const newFilter = vacations.filter((value) => {
+        const newFilter = props.vacations.filter((value) => {
             return value.name.toLowerCase().includes(searchTerm.toLowerCase());
         });
-        (Object.keys(newFilter).length === 0)?setFilteredError(true):setFilteredData(newFilter);
-        
+        (Object.keys(newFilter).length === 0)?props.setFilteredError(true):props.setFilteredData(newFilter); 
     };
 
     useEffect (() =>{
         if(searchTerm===""){
-            setFilteredError(false);
-            setFilteredData([]);
+            props.setFilteredError(false);
+            props.setFilteredData([]);
         }
     }, [searchTerm])
 
@@ -27,8 +26,8 @@ const SearchBar = ({vacations,setFilteredData,setFilteredError}) => {
                 <i className="search-icon"> <FiSearch style={{ color: '#AFAFAF' }} /></i>
                 <input type="text" className="search-term" placeholder="Search by name or location" onChange={(e) => setSearchTerm(e.target.value)} />
             </div>
-            <button type="submit" className="search-button" onClick={handleFilter}>
-                <FiSearch style={{ color: "#FFFFFF", width: "20px", height: "20px",cursor:"pointer" }} />
+            <button type="submit" className="search-button"  onClick={handleFilter}>
+                <FiSearch className="search-button-style"/>
             </button>
         </div>);
 

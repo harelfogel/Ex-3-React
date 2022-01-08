@@ -16,17 +16,17 @@ const Card = (props) => {
                 <img className="img-selected" src={props.data.image} />
                 <div className="button">
                     <button className="button-edit" onClick={() =>handleClick()}>
-                        <MdModeEdit style={{ color: "white", width: "18px", height: "20px", justifyContent: "center", cursor: "pointer", marginLeft: "-1.1px", marginTop: "1px" }} />
+                        <MdModeEdit className="md-mode-edit"/>
                     </button>
                     <button className="button-delete" onClick={() => props.setVacations(prevState => { return prevState.filter(({ name }) => name !== props.data.name) })}
                     >
-                        <MdDelete style={{ color: "white", width: "18px", height: "20px", justifyContent: "center", cursor: "pointer", marginLeft: "-1.1px", marginTop: "1px" }} />
+                        <MdDelete className="md-delete"/>
                     </button>
                 </div>
                 <div className="bottom-card" >
                     <h5>{props.data.name}</h5>
                     <div className="row">
-                        <BsGeoAltFill style={{ color: "F86549", cursor: "pointer" }} />
+                        <BsGeoAltFill className="bs-geo-alt-fill" />
                         <span>
                             {props.data.location}
                         </span>
@@ -43,17 +43,17 @@ const Card = (props) => {
                 <img src={props.data.image} />
                 <div className="button">
                     <button className="button-edit" onClick={() => handleClick()}>
-                        <MdModeEdit style={{ color: "white", width: "18px", height: "20px", justifyContent: "center", cursor: "pointer", marginLeft: "-1.1px", marginTop: "1px" }} />
+                        <MdModeEdit className="md-mode-edit" />
                     </button>
                     <button className="button-delete" onClick={() => props.setVacations(prevState => { return prevState.filter(({ name }) => name !== props.data.name) })}
                     >
-                        <MdDelete style={{ color: "white", width: "18px", height: "20px", justifyContent: "center", cursor: "pointer", marginLeft: "-1.1px", marginTop: "1px" }} />
+                        <MdDelete className="md-delete" />
                     </button>
                 </div>
                 <div className="bottom-card" >
                     <h5>{props.data.name}</h5>
                     <div className="row">
-                        <BsGeoAltFill style={{ color: "F86549", cursor: "pointer" }} />
+                        <BsGeoAltFill className="bs-geo-alt-fill" />
                         <span>
                             {props.data.location}
                         </span>
