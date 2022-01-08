@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Paris",
+        "image": "https://www.voyagesdereve.ch/upload/images/xParis-Tour-Eiffel.jpg.pagespeed.ic.2trsrFlXuR.jpg",
+        "location": "France",
+        "price": "$1,000"
+    },
+    {
+        "name": "London",
+        "image": "https://cdn.londonandpartners.com/-/media/images/london/visit/things-to-do/sightseeing/london-attractions/tower-bridge/thames_copyright_visitlondon_antoinebuchet640x360.jpg?mw=640&hash=27AEBE2D1B7279A196CC1B4548638A9679BE107A",
+        "location": "England",
+        "price": "$3,400"
+    },
+    {
+        "name": "Barcelona",
+        "image": "https://www.sbb.ch/content/dam/internet/sharedimages/ff/Spanien-Barcelona.jpeg.sbb-transform/original/Spanien-Barcelona.1637115349806.jpeg",
+        "location": "Spain",
+        "price": "$1,400"
+    },
+    {
+        "name": "Santorini",
+        "image": "https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/31/43/3143001_v7.jpeg",
+        "location": "Greece",
+        "price": "$3,000"
+    },
+    {
+        "name": "Tulum",
+        "image": "https://www.senatorrivieracancunsparesort.com/wp-content/uploads/2019/11/tulum2-1280x720.jpg",
+        "location": "Mexico",
+        "price": "$7,000"
+    },
+    {
+        "name": "Galapagos",
+        "image": "https://a.storyblok.com/f/53624/4096x1260/0321536d36/galapagos-islands_4096x1260.jpg",
+        "location": "Ecuador",
+        "price": "$9,500"
+    },
+    {
+        "name": "Lisbon",
+        "image": "https://keystoneacademic-res.cloudinary.com/image/upload/q_auto,f_auto,w_743,c_limit/element/51/51354_1_Cost.jpg",
+        "location": "Portugal",
+        "price": "$1,700"
+    },
+    {
+        "name": "New York",
+        "image": "https://cdn.britannica.com/80/115080-050-46BE2B70/Brooklyn-Bridge-East-River-New-York-City.jpg",
+        "location": "USA",
+        "price": "$9,700"
+    }
+]

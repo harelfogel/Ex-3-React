@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Card from './components/Card/Card';
@@ -7,14 +8,20 @@ import AddVacationForm from './components/Form/Form';
 
 
 function App() {
+  const [filteredData, setFilteredData] = useState([]);
+  const [editMode, setEditMode] = useState({ mode: false, data: {} });
+
+  useEffect(() => {
+    console.log({ editMode });
+  }, [editMode])
   return (
     <div className="container">
       <div className="left-container">
-        <SearchBar />
-        <VacationList/>
+        <SearchBar setFilteredData={setFilteredData} />
+        <VacationList vacationList={filteredData} setEditMode={setEditMode} />
       </div>
       <div className="right-container">
-       <AddVacationForm/>
+        {!editMode.mode ? <AddVacationForm /> : <div>{JSON.stringify(editMode.data)}</div>}
       </div>
     </div>
   );
