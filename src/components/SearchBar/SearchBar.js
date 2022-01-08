@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './SearchBar.css';
 import { FiSearch } from 'react-icons/fi';
 
-
-
-const SearchBar = ({vacations,setFilteredData}) => {
+const SearchBar = ({vacations,setFilteredData,setFilteredError}) => {
     const [searchTerm, setSearchTerm] = useState("");
 
     const handleFilter = () => {
@@ -12,7 +10,7 @@ const SearchBar = ({vacations,setFilteredData}) => {
         const newFilter = vacations.filter((value) => {
             return value.name.toLowerCase().includes(searchTerm.toLowerCase());
         });
-        setFilteredData(newFilter);
+        ( Object.keys(newFilter).length === 0)?alert("Cant find Vacation!"):setFilteredData(newFilter);
     };
 
     useEffect (() =>{

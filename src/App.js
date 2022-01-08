@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Card from './components/Card/Card';
 import SearchBar from './components/SearchBar/SearchBar';
 import VacationList from './components/VacationList/VacationList';
 import AddVacationForm from './components/Form/Form';
@@ -11,18 +9,20 @@ import vacationsData from './Data/vacations';
 
 function App() {
   const [filteredData, setFilteredData] = useState([]);
+  const [filteredError,setFilteredError]=useState([]);
   const [editMode, setEditMode] = useState({ mode: false, data: {} });
   const [addData,setAddData]=useState([]);
   const [vacations,setVacations]= useState(vacationsData);
+  const [editData,setEditData]=useState([]);
 
   return (
     <div className="container">
       <div className="left-container">
-        <SearchBar setFilteredData={setFilteredData} vacations={vacations} />
-        <VacationList vacationList={filteredData} setEditMode={setEditMode} vacations={vacations} setVacations={setVacations}  />
+        <SearchBar setFilteredData={setFilteredData} setFilteredError={setFilteredError} vacations={vacations} />
+        <VacationList vacationList={filteredData} filteredError={filteredError} setEditMode={setEditMode} vacations={vacations} setVacations={setVacations} editMode={editMode} />
       </div>
       <div className="right-container">
-        {!editMode.mode ? <AddVacationForm addData={addData} setAddData={setAddData} setVacations={setVacations} /> : <EditVacationForm editMode={editMode}/> }
+        {!editMode.mode ? <AddVacationForm addData={addData} setAddData={setAddData} setVacations={setVacations} /> : <EditVacationForm editMode={editMode} setEditMode={setEditMode} editData={editData} setEditData={setEditData} setVacations={setVacations} vacations={vacations}/> }
       </div>
     </div>
   );

@@ -15,7 +15,6 @@ function checkProperties(obj) {
     return true;
 }
 const AddVacationForm = (props) => {
-    
     const [addVacation, setAddVacation] = useState({});
     const appendFormValues= (key,value)=>{
         setAddVacation(prevState=> ({...prevState,[key]:value}))
@@ -24,6 +23,7 @@ const AddVacationForm = (props) => {
         e.preventDefault();
         if(checkProperties(addVacation)){
            props.setVacations(prevState =>([...prevState,addVacation]));
+           alert('New vacation hass been added!');
         } 
     };
     return <div className="form-container">

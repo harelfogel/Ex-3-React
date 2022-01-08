@@ -6,6 +6,18 @@ span, .price {
   line-height: 127.7%; 
 }
 
+.card-selected{
+  width: 291px;
+  height: 252px;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+  border: 2px solid #F86549;
+  border-radius: 20px;
+  background: #FFFFFF;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 100px 80px rgba(153, 165, 236, 0.05), 0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963), 0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704), 0px 20px 13px rgba(153, 165, 236, 0.025), 0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296), 0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
+}
 
 .card{
     width: 291px;
@@ -19,7 +31,8 @@ span, .price {
     box-shadow: 0px 100px 80px rgba(153, 165, 236, 0.05), 0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963), 0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704), 0px 20px 13px rgba(153, 165, 236, 0.025), 0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296), 0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
 }
 
-.card>img { 
+
+.card >img { 
     width:263.19px;
     height:162.38px;
     margin-left: 13.8px;
@@ -29,6 +42,18 @@ span, .price {
     margin-top: 23.62px;
     border-radius:20px;
 }
+
+.img-selected{
+  width:263.19px;
+    height:162.38px;
+    margin-left: 13.8px;
+    align-items: center;
+    align-content:center;
+    justify-content: center;
+    margin-top: 23.62px;
+    border-radius:20px;
+}
+
 .button{
     margin-top:-25px;
     margin-left:200px;
@@ -70,7 +95,7 @@ h5{
     display:flex;
     justify-content: space-evenly;
     margin-left: -2px;
-    margin-top: 5px;
+    margin-top: -2px;
 }
 
 span{
