@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './SearchBar.css';
 import { FiSearch } from 'react-icons/fi';
+import { CgOpenCollective } from 'react-icons/cg';
 
 const SearchBar = ({vacations,setFilteredData,setFilteredError}) => {
     const [searchTerm, setSearchTerm] = useState("");
 
     const handleFilter = () => {
-
         const newFilter = vacations.filter((value) => {
             return value.name.toLowerCase().includes(searchTerm.toLowerCase());
         });
-        ( Object.keys(newFilter).length === 0)?alert("Cant find Vacation!"):setFilteredData(newFilter);
+        (Object.keys(newFilter).length === 0)?setFilteredError(true):setFilteredData(newFilter);
+        
     };
 
     useEffect (() =>{
         if(searchTerm===""){
+            setFilteredError(false);
             setFilteredData([]);
         }
     }, [searchTerm])

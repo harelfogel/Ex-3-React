@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import VacationList from './components/VacationList/VacationList';
@@ -9,7 +9,7 @@ import vacationsData from './Data/vacations';
 
 function App() {
   const [filteredData, setFilteredData] = useState([]);
-  const [filteredError,setFilteredError]=useState([]);
+  const [filteredError,setFilteredError]=useState(false);
   const [editMode, setEditMode] = useState({ mode: false, data: {} });
   const [addData,setAddData]=useState([]);
   const [vacations,setVacations]= useState(vacationsData);
@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="container">
       <div className="left-container">
-        <SearchBar setFilteredData={setFilteredData} setFilteredError={setFilteredError} vacations={vacations} />
+        <SearchBar setFilteredData={setFilteredData} setFilteredError={setFilteredError} filteredError={filteredError} vacations={vacations} />
         <VacationList vacationList={filteredData} filteredError={filteredError} setEditMode={setEditMode} vacations={vacations} setVacations={setVacations} editMode={editMode} />
       </div>
       <div className="right-container">

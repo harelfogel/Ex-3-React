@@ -72,7 +72,7 @@ input{
 }
 
 .travel-image{
-    background-image: url('../images/travel.png');
+    background-image: url('../../Images/travel.png');
     width: 294px;
     height: 279px;
     display:flex;
