@@ -7,7 +7,8 @@ import { MdModeEdit } from "react-icons/md";
 const Card = (props) => {
     const [selected, setSelected] = useState(false);
     const handleClick = () => {
-        props.setEditMode({ mode: true, data: props.data })
+        const editFlag=false;
+        props.setEditMode({ mode: !editFlag, data: props.data })
         setSelected(!selected);
     };
     if (selected) {

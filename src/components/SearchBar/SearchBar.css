@@ -1,12 +1,11 @@
 .search-bar{
-    padding:2rem;
+    margin:3rem;
     display:flex;
 }
 
 .search-container,.search-term{
     display: flex;
     flex: 1 1 300px;
-    position: relative;
     overflow: hidden;
     width: 327px;
     height: 50px;

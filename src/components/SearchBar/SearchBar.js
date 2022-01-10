@@ -10,7 +10,7 @@ const SearchBar = (props) => {
         const newFilter = props.vacations.filter((value) => {
             return value.name.toLowerCase().includes(searchTerm.toLowerCase());
         });
-        (Object.keys(newFilter).length === 0)?props.setFilteredError(true):props.setFilteredData(newFilter); 
+        ((Object.keys(newFilter).length === 0)||(newFilter.length>38))?props.setFilteredError(true):props.setFilteredData(newFilter); 
     };
 
     useEffect (() =>{
@@ -18,8 +18,10 @@ const SearchBar = (props) => {
             props.setFilteredError(false);
             props.setFilteredData([]);
         }
-    }, [searchTerm])
-
+       if(searchTerm.length>38){
+           alert('Too many letters for search');
+       }
+    }, [searchTerm]);
     return (
         <div className="search-bar">
             <div className="search-container">
