@@ -3,7 +3,7 @@ import './Form.css';
 import { FaCheck } from 'react-icons/fa';
 import { CgClose } from 'react-icons/cg';
 
-const EditVacationForm = ({ editMode, setEditMode, vacations, editData, setEditData }) => {
+const EditVacationForm = (props) => {
     const [editVacation, setEditVacation] = useState([]);
     const editFormValues = (key, value) => {
         setEditVacation(prevState => ({ ...prevState, [key]: value }));
@@ -27,11 +27,11 @@ const EditVacationForm = ({ editMode, setEditMode, vacations, editData, setEditD
     const handleEditForm = (e) => {
         e.preventDefault();
         let updatedData = {};
-        setEditMode(prevState => ({ ...prevState, editVacation }));
+        props.setEditMode(prevState => ({ ...prevState, editVacation }));
         updatedData=Object.assign(updatedData,editVacation);
-        compareKeys(editMode.data,updatedData);
-        const index = (vacations.indexOf(editMode.data));
-        vacations[index] = updatedData;
+        compareKeys(props.editMode.data,updatedData);
+        const index = (props.vacations.indexOf(props.editMode.data));
+        props.vacations[index] = updatedData;
         alert(`${JSON.stringify(editVacation)} is updated!`);
     };
     const handleAbort = () => {
@@ -44,33 +44,33 @@ const EditVacationForm = ({ editMode, setEditMode, vacations, editData, setEditD
             <fieldset className="edit-field-set">
                 <label className>
                     <p>Name</p>
-                    <input type="text" name="name" placeholder={(editMode.data.name)} value={editVacation?.name} onChange={e => editFormValues("name", e.target.value)} />
+                    <input type="text" name="name" placeholder={(props.editMode.data.name)} value={editVacation?.name} onChange={e => editFormValues("name", e.target.value)} />
                 </label>
             </fieldset>
             <fieldset>
                 <label>
                     <p>Location</p>
-                    <input type="text" name="location" placeholder={(editMode.data.location)} value={editVacation?.location} onChange={e => editFormValues("location", e.target.value)} />
+                    <input type="text" name="location" placeholder={(props.editMode.data.location)} value={editVacation?.location} onChange={e => editFormValues("location", e.target.value)} />
                 </label>
             </fieldset>
             <fieldset>
                 <label>
                     <p>Price</p>
-                    <input type="text" name="price" placeholder={(editMode.data.price)} value={editVacation?.price} onChange={e => editFormValues("price", e.target.value)} />
+                    <input type="text" name="price" placeholder={(props.editMode.data.price)} value={editVacation?.price} onChange={e => editFormValues("price", e.target.value)} />
                 </label>
             </fieldset>
             <fieldset>
                 <label>
                     <p>Image url</p>
-                    <input type="text" name="image-url" placeholder={(editMode.data.image)} value={editVacation?.image} onChange={e => editFormValues("image", e.target.value)} />
+                    <input type="text" name="image-url" placeholder={(props.editMode.data.image)} value={editVacation?.image} onChange={e => editFormValues("image", e.target.value)} />
                 </label>
             </fieldset>
             <div className="edit-bottom-form">
                 <button className="check-button" type="submit" onClick={handleEditForm}>
-                    <FaCheck style={{ color: "white", width: "20px", height: "17px", cursor: "pointer" }} />
+                    <FaCheck className="edit-fa-check-button"/>
                 </button>
                 <button className="close-button" type="submit" onClick={handleAbort}>
-                    <CgClose style={{ color: "white", width: "20px", height: "17px", cursor: "pointer" }} />
+                    <CgClose className="edit-cd-close-button" style={{ color: "white", width: "20px", height: "17px", cursor: "pointer" }} />
                 </button>
             </div>
         </form>

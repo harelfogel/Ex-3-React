@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Card from '../Card/Card';
 import ErrorCard from '../ErrorCard/ErrorCard';
-
 import './VacationList.css';
 
 const VacationList = (props) => {

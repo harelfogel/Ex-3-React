@@ -46,3 +46,10 @@
     border: white;
   }
 
+  .search-button-style{
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    cursor:pointer; 
+  }
+

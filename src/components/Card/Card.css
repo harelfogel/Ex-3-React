@@ -111,6 +111,21 @@ span{
   color:#34A59F;
 }
 
+.md-mode-edit,.md-delete{
+  color: white;
+  width: 18px;
+  height: 20px;
+  justify-content:center;
+  cursor: pointer;
+  margin-left: -1.1px;
+  margin-top: 1px;
+} 
+
+.bs-geo-alt-fill{
+   color: #F86549;
+   cursor:pointer;
+}
+
 
 
 

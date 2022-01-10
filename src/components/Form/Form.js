@@ -57,7 +57,7 @@ const AddVacationForm = (props) => {
             </fieldset>
             <div className="bottom-form">
                 <button className="add-button" type="submit" onClick={handleAddForm}>
-                    <RiAddFill style={{ color: "white", width: "28px", height: "28px",cursor:"pointer" }} />
+                    <RiAddFill className="add-fill-button"/>
                 </button>
             </div>
         </form>
