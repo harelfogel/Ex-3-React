@@ -1,38 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Form.css';
 import { FaCheck } from 'react-icons/fa';
 import { CgClose } from 'react-icons/cg';
+import {handleErrorsInForm} from './Form.js';
+
 
 const EditVacationForm = (props) => {
     const [editVacation, setEditVacation] = useState([]);
     const editFormValues = (key, value) => {
         setEditVacation(prevState => ({ ...prevState, [key]: value }));
     }
-
-    const compareKeys=(originalObj, editedObj) => {
-        if(!(editedObj.hasOwnProperty("name"))){
-            editedObj.name=originalObj.name;
+    const compareKeys = (originalObj, editedObj) => {
+        if (!(editedObj.hasOwnProperty("name"))) {
+            editedObj.name = originalObj.name;
         }
-        if(!(editedObj.hasOwnProperty("location"))){
-            editedObj.location=originalObj.location;
+        if (!(editedObj.hasOwnProperty("location"))) {
+            editedObj.location = originalObj.location;
         }
-        if(!(editedObj.hasOwnProperty("price"))){
-            editedObj.price=originalObj.price;
+        if (!(editedObj.hasOwnProperty("price"))) {
+            editedObj.price = originalObj.price;
         }
-        if(!(editedObj.hasOwnProperty("image"))){
-            editedObj.image=originalObj.image;
+        if (!(editedObj.hasOwnProperty("image"))) {
+            editedObj.image = originalObj.image;
         }
-    } 
-
+    }
     const handleEditForm = (e) => {
         e.preventDefault();
-        let updatedData = {};
-        props.setEditMode(prevState => ({ ...prevState, editVacation }));
-        updatedData=Object.assign(updatedData,editVacation);
-        compareKeys(props.editMode.data,updatedData);
-        const index = (props.vacations.indexOf(props.editMode.data));
-        props.vacations[index] = updatedData;
-        alert(`${JSON.stringify(editVacation)} is updated!`);
+        if (handleErrorsInForm(editVacation,'edit')) {
+            return;
+        } else{
+            let updatedData = {};
+            props.setEditMode(prevState => ({ ...prevState, editVacation }));
+            updatedData = Object.assign(updatedData, editVacation);
+            compareKeys(props.editMode.data, updatedData);
+            const index = (props.vacations.indexOf(props.editMode.data));
+            props.vacations[index] = updatedData;
+            alert(`${JSON.stringify(editVacation)} is updated!`);
+        }
+           
     };
     const handleAbort = () => {
         alert('Nothing has been edited!');
@@ -67,7 +72,7 @@ const EditVacationForm = (props) => {
             </fieldset>
             <div className="edit-bottom-form">
                 <button className="check-button" type="submit" onClick={handleEditForm}>
-                    <FaCheck className="edit-fa-check-button"/>
+                    <FaCheck className="edit-fa-check-button" />
                 </button>
                 <button className="close-button" type="submit" onClick={handleAbort}>
                     <CgClose className="edit-cd-close-button" style={{ color: "white", width: "20px", height: "17px", cursor: "pointer" }} />

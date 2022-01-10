@@ -5,11 +5,12 @@
 
 .form-container{
     display: flex;
+    position: block;
+    margin-bottom: 370px;
     width: 618px;
-    height:614px;
+    height: 622px;
     background: #FFFFFF;
     border-radius: 25px;
-    margin-top:116px;
     flex-direction: column;
      transform: matrix(1, 0, 0, 1, 0, 0); 
     box-shadow: 0px 0px 17.8793px rgba(0, 0, 0, 0.05);
@@ -23,8 +24,8 @@ h2{
     color: #000001;
     text-shadow: 0px 2px 80px #FFFFFF;
     margin-top: 10px;
-    font-size: 25px;
-    color: #000001;
+    
+   
 }
 
 .form-labels {
@@ -57,30 +58,18 @@ input{
 
 }
 
-.bottom-form{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   justify-items: center; 
-   color: transparent;
-   z-index: -1;
-   width: 618px;
-   height: 300px;
-   margin-left:-1rem;
-   margin-top: 3rem;
-   background: #E5E5E5;
-}
-
 .travel-image{
     background-image: url('../../Images/travel.png');
-    width: 294px;
-    height: 279px;
-    display:flex;
+    width: 290px;
+    height: 277px;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    margin-top: -89px;
-    margin-left: 150px;
+    position: block;
+    align-items: center;
+    margin-top:-82px;
+    margin-left: 141px;
+   
 }
 
 .add-button{
@@ -93,8 +82,8 @@ input{
     height: 48px;
     justify-content: center;
     align-content: center;
-    margin-left: 40px;
-    margin-top: -430px;
+    margin-left: 280px;
+    margin-top: -40px;
 }  
 .add-fill-button{
     color: white;
@@ -113,7 +102,7 @@ input{
     height: 552px;
     background: #FFFFFF;
     border-radius: 25px;
-    margin-top:121px;
+    margin-top:-435px;
     flex-direction: column;
      transform: matrix(1, 0, 0, 1, 0, 0); 
     box-shadow: 0px 0px 17.8793px rgba(0, 0, 0, 0.05);

@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
-import VacationList from './components/VacationList/VacationList';
-import AddVacationForm from './components/Form/Form';
-import EditVacationForm from './components/Form/EditForm';
+import SearchBar from './Components/SearchBar/SearchBar';
+import VacationList from './Components/VacationList/VacationList';
+import AddVacationForm from './Components/Form/Form';
+import EditVacationForm from './Components/Form/EditForm';
 import vacationsData from './Data/vacations';
-
 
 function App() {
   const [filteredData, setFilteredData] = useState([]);
