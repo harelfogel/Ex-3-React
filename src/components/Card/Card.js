@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import './Card.css'
 import { BsGeoAltFill } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
@@ -7,8 +7,8 @@ import { MdModeEdit } from "react-icons/md";
 const Card = (props) => {
     const [selected, setSelected] = useState(false);
     const handleClick = () => {
-        const editFlag=false;
-        props.setEditMode({ mode: !editFlag, data: props.data })
+        let editFlag = false;
+        props.setEditMode({ mode: !editFlag, data: props.data });
         setSelected(!selected);
     };
     if (selected) {
@@ -16,7 +16,7 @@ const Card = (props) => {
             <div className="card-selected" >
                 <img className="img-selected" src={props.data.image} />
                 <div className="button">
-                    <button className="button-edit" onClick={() =>handleClick()}>
+                    <button className="button-edit" onClick={() => handleClick()}>
                         <MdModeEdit className="md-mode-edit"/>
                     </button>
                     <button className="button-delete" onClick={() => props.setVacations(prevState => { return prevState.filter(({ name }) => name !== props.data.name) })}
@@ -27,7 +27,7 @@ const Card = (props) => {
                 <div className="bottom-card" >
                     <h5>{props.data.name}</h5>
                     <div className="row">
-                        <BsGeoAltFill className="bs-geo-alt-fill" />
+                        <BsGeoAltFill className="bs-geo-alt-fill"/>
                         <span>
                             {props.data.location}
                         </span>
@@ -38,23 +38,23 @@ const Card = (props) => {
                 </div>
             </div>
         );
-    }  else{
+    } else {
         return (
             <div className="card" >
                 <img src={props.data.image} />
                 <div className="button">
                     <button className="button-edit" onClick={() => handleClick()}>
-                        <MdModeEdit className="md-mode-edit" />
+                        <MdModeEdit className="md-mode-edit"/>
                     </button>
                     <button className="button-delete" onClick={() => props.setVacations(prevState => { return prevState.filter(({ name }) => name !== props.data.name) })}
                     >
-                        <MdDelete className="md-delete" />
+                        <MdDelete className="md-delete"/>
                     </button>
                 </div>
                 <div className="bottom-card" >
                     <h5>{props.data.name}</h5>
                     <div className="row">
-                        <BsGeoAltFill className="bs-geo-alt-fill" />
+                        <BsGeoAltFill className="bs-geo-alt-fill"/>
                         <span>
                             {props.data.location}
                         </span>

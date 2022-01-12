@@ -57,7 +57,6 @@ const checkPrice = (inputTxt) => {
     }
 }
 
-
 const AddVacationForm = (props) => {
     const [addVacation, setAddVacation] = useState({});
     const appendFormValues = (key, value) => {
@@ -110,6 +109,5 @@ const AddVacationForm = (props) => {
         </form>
     </div>;
 }
-
 export default AddVacationForm;
 

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './SearchBar.css';
 import { FiSearch } from 'react-icons/fi';
 
-
 const SearchBar = (props) => {
     const [searchTerm, setSearchTerm] = useState("");
 

@@ -13,7 +13,6 @@ function App() {
   const [addData,setAddData]=useState([]);
   const [vacations,setVacations]= useState(vacationsData);
   const [editData,setEditData]=useState([]);
-
   return (
     <div className="container">
       <div className="left-container">

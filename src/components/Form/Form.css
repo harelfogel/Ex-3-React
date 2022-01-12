@@ -5,14 +5,13 @@
 
 .form-container{
     display: flex;
-    position: block;
-    margin-bottom: 370px;
-    width: 618px;
+    margin-bottom: 8.7rem;
+    width: 612px;
     height: 622px;
     background: #FFFFFF;
     border-radius: 25px;
     flex-direction: column;
-     transform: matrix(1, 0, 0, 1, 0, 0); 
+    transform: matrix(1, 0, 0, 1, 0, 0); 
     box-shadow: 0px 0px 17.8793px rgba(0, 0, 0, 0.05);
 }
 
@@ -24,8 +23,6 @@ h2{
     color: #000001;
     text-shadow: 0px 2px 80px #FFFFFF;
     margin-top: 10px;
-    
-   
 }
 
 .form-labels {
@@ -68,7 +65,7 @@ input{
     position: block;
     align-items: center;
     margin-top:-82px;
-    margin-left: 141px;
+    margin-left: 149px;
    
 }
 
@@ -82,7 +79,7 @@ input{
     height: 48px;
     justify-content: center;
     align-content: center;
-    margin-left: 280px;
+    margin-left: 288px;
     margin-top: -40px;
 }  
 .add-fill-button{
@@ -92,17 +89,15 @@ input{
     cursor:pointer; 
 }
 
-
-
 /* ------------edit from section ------------ */
 
 .edit-form-container{
     display: flex;
-    width: 618px;
+    width: 612px;
     height: 552px;
     background: #FFFFFF;
     border-radius: 25px;
-    margin-top:-435px;
+    margin-bottom: 14.6rem;
     flex-direction: column;
      transform: matrix(1, 0, 0, 1, 0, 0); 
     box-shadow: 0px 0px 17.8793px rgba(0, 0, 0, 0.05);
